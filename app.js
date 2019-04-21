@@ -17,7 +17,7 @@ function ensureToken(req, res, next) {
 
     if(tokenBracket !== 'JWT'){
       res.status(403).send({
-        'message':'worng format header authorization'
+        'message':'worng format header Authorization'
       })
     }
 
@@ -25,7 +25,7 @@ function ensureToken(req, res, next) {
       if(err){
         console.log('not allowed');
         res.status(403).send({
-          'message':'bearer token is not valid'
+          'message':'token is not valid'
         })
       }
     });
