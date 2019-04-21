@@ -52,7 +52,7 @@ app.get('/protected', ensureToken, function(req, res){
     'message':'protected'
   })
 })
-
-app.listen(3000, function(){
-  console.log('run in port 3000');
+var port = 3000
+app.listen(port, function(){
+  console.log(`run in port 3000 ${port}`);
 })
